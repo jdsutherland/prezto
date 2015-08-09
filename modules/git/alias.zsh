@@ -66,6 +66,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip 'yes'; then
 
   # Conflict (C)
   alias gCl='git --no-pager diff --name-only --diff-filter=U'
+  alias gCl='git status | sed -n "s/^.*both [a-z]*ed: *//p"'
   alias gCa='git add $(gCl)'
   alias gCe='git mergetool $(gCl)'
   alias gCo='git checkout --ours --'
